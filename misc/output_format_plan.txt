@@ -1,0 +1,14 @@
+simulation file
+	game_id, turn_id, num_players, player_one_card_count, player_two_card_count
+
+basic_logging:   simulation outputs data on a completed GAME level
+verbose_logging: simulation outputs data on a completed STEP level
+
+basic_logging_data
+    sim_winner   player 1 wins          count of True
+    sim_winner   player 2 wins          count of False
+    sim_length   average game length    avg of all array values
+    sim_step_d   average wins delta     avg of all array values
+    sim_wars     average number of wars avg of all array values
+    sim_wars     num wars               sum of all array values
+    sim_gw_wins  Winner won more wars   count of True

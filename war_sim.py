@@ -1,10 +1,9 @@
 import game
-import time
 
 
 class Simulation:
 
-    def __init__(self, num_games, num_players, verbose=False, num_war_cards=3):
+    def __init__(self, num_games=1000, num_players=2, num_war_cards=3, verbose=False):
         self.verbose = verbose
         self.num_war_cards = num_war_cards
         self.num_games = num_games
@@ -53,8 +52,7 @@ class Simulation:
             sum_wars = sum(self.sim_wars)
             annom_rate = self.sim_gw_wins.count(False)/(len(self.sim_gw_wins)*1.0)
 
-        #Report Simulation Results
-        '''
+        # Report Simulation Results
         print 'Game', count + 1, 'of', self.num_games
         print 'War Cards:\t', self.num_war_cards
         print 'P1 Wins:\t', p1_wins
@@ -64,23 +62,11 @@ class Simulation:
         print 'Avg Wars:\t', avg_wars
         print 'Sum Wars:\t', sum_wars
         print 'Annom Rate:\t', annom_rate
-        time.sleep(0)
-        '''
+        print ''
 
 # WARNING: the higher the num war cards, the higher the probability of both players running out of cards mid war
 # causing an infinite loop of fail... so less than 6 is a good number right now
 
-#if len(sys.argv) > 1:
-#    games = int(sys.argv[1])
-#    if len(sys.argv) > 2:
-#        war_cards = int(sys.argv[2])
-#        my_sim = Simulation(games, 2, False, war_cards)
-#    else:
-#        my_sim = Simulation(games, 2, False, 3)
-#else:
-#    my_sim = Simulation(10000, 2, False, 3)
-#
-#my_sim.run_simulation()
 
 
 

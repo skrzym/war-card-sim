@@ -53,16 +53,16 @@ class Simulation:
             annom_rate = self.sim_gw_wins.count(False)/(len(self.sim_gw_wins)*1.0)
 
         # Report Simulation Results
-        print 'Game', count + 1, 'of', self.num_games
-        print 'War Cards:\t', self.num_war_cards
-        print 'P1 Wins:\t', p1_wins
-        print 'P2 Wins:\t', p2_wins
-        print 'Avg Len:\t', avg_len
-        print 'Avg WDif:\t', avg_wd
-        print 'Avg Wars:\t', avg_wars
-        print 'Sum Wars:\t', sum_wars
-        print 'Annom Rate:\t', annom_rate
-        print ''
+        print('Game', count + 1, 'of', self.num_games)
+        print('War Cards:\t', self.num_war_cards)
+        print('P1 Wins:\t', p1_wins)
+        print('P2 Wins:\t', p2_wins)
+        print('Avg Len:\t', avg_len)
+        print('Avg WDif:\t', avg_wd)
+        print('Avg Wars:\t', avg_wars)
+        print('Sum Wars:\t', sum_wars)
+        print('Annom Rate:\t', annom_rate)
+        print('')
 
 # WARNING: the higher the num war cards, the higher the probability of both players running out of cards mid war
 # causing an infinite loop of fail... so less than 6 is a good number right now

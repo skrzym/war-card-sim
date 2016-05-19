@@ -19,7 +19,7 @@ class Deck:
 
     def print_deck(self):
         for card in self.cards:
-            print card
+            print(card)
 
     def shuffle_deck(self):
         random.shuffle(self.cards)

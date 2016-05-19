@@ -156,17 +156,17 @@ class Game:
         if self.verbose:
             clear()
             if self.winner is None:
-                print 'Nobody wins!', str(self.stat_step_count) + ':', self.stat_card_count
+                print('Nobody wins!', str(self.stat_step_count) + ':', self.stat_card_count)
             else:
-                print self.winner.name, 'wins the game!'
-            print '  ' + 'Games: ' + str(self.stat_step_count)
-            print '  ' + 'Cards: ' + str(self.stat_card_count)
-            print '  ' + 'Wins : ' + str(self.stat_wins)
-            print '  ' + 'Wars : ' + str(self.stat_wars)
-            print '  ' + 'WarsW: ' + str(self.stat_wars_won)
-            print '  ' + 'WCard: ' + str(self.stat_winning_card[-1])
+                print(self.winner.name, 'wins the game!')
+            print('  ' + 'Games: ' + str(self.stat_step_count))
+            print('  ' + 'Cards: ' + str(self.stat_card_count))
+            print('  ' + 'Wins : ' + str(self.stat_wins))
+            print('  ' + 'Wars : ' + str(self.stat_wars))
+            print('  ' + 'WarsW: ' + str(self.stat_wars_won))
+            print('  ' + 'WCard: ' + str(self.stat_winning_card[-1]))
             cards_by_value = [self.stat_winning_card[x][1:] for x in range(len(self.stat_winning_card))]
             value_frequency = Counter(cards_by_value)
-            print '  ' + 'Freq : ' + str(value_frequency)
-            print ''
+            print('  ' + 'Freq : ' + str(value_frequency))
+            print('')
             time.sleep(0.1)
